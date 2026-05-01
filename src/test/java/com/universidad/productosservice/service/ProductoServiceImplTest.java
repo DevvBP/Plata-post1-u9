@@ -133,7 +133,7 @@ class ProductoServiceImplTest {
         assertThatThrownBy(() ->
                 productoService.crear("Mouse", new BigDecimal("25.00"), -1))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining("Stock");
+                .hasMessageContaining("stock");
 
         verifyNoInteractions(productoRepository);
     }
